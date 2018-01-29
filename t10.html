@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第十个页面</title>
+<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css" />
+<link href="./css/site.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="./css/t10.css" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+    <div id="starsBox"></div>
+
+	<div class="container-fluid">
+
+		<div class="clearfix title-name"><img src="images/title.png" /> 第十个页面</div>
+		<div class="row">
+			<div class="col-xs-12">				
+                <table class="table table1">
+                    <tbody>
+                        <tr>
+                            <th>服务器数量</th>
+                            <td>76台</td>
+                            <td>SLA 69%</td>
+                            <th>网络链路数量</th>
+                            <td>126条</td>
+                            <td>SLA 35%</td>
+                        </tr>
+                        <tr>
+                            <th>数据库数量</th>
+                            <td>76台</td>
+                            <td>SLA 69%</td>
+                            <th>中间件数量</th>
+                            <td>126套</td>
+                            <td>SLA 35%</td>
+                        </tr>
+                    <tbody>
+                </table>
+			</div>			
+		</div>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(function () {
+        loadStars();
+    });    
+</script>

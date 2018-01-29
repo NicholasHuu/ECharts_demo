@@ -1,0 +1,94 @@
+@CHARSET "UTF-8";
+
+html, body {
+    background: #000 url(../images/bg_01.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.title-name {
+    color: #27DFF9;
+    font-size: 20pt;
+    margin-bottom: 40px;
+}
+
+.small-title-name {
+    border: 3px solid #1D859E;
+    color: #27DFF9;
+    font-size: 15pt;
+    line-height: 40px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding-left: 20px;
+    box-shadow: inset 0px 0px 20px #1D859E;
+    width: 200px;
+}
+
+.table1 {
+    border: 2px solid #1D859E;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.table1 tbody tr td {
+    border: 0;
+    color: #fff;
+    width: 33.33%;
+    line-height: 62px;
+    white-space: nowrap;
+    padding-left:30px;
+}
+
+span.yuan {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    float: left;
+    margin-top: 21px;
+    margin-right: 10px;
+    animation: myfirst 1.5s infinite ease-in-out;
+}
+
+.green {
+    /*background: -webkit-radial-gradient(red, green, blue);*/ /* Safari 5.1 - 6.0 */
+    /*background: -o-radial-gradient(red, green, blue);*/ /* Opera 11.6 - 12.0 */
+    /*background: -moz-radial-gradient(red, green, blue);*/ /* Firefox 3.6 - 15 */
+    background: radial-gradient( #59FF00,#59FF00, transparent, #59FF00,#59FF00); /* 标准的语法（必须放在最后） */
+}
+
+.red {
+    /*background: -webkit-radial-gradient(red, green, blue);*/ /* Safari 5.1 - 6.0 */
+    /*background: -o-radial-gradient(red, green, blue);*/ /* Opera 11.6 - 12.0 */
+    /*background: -moz-radial-gradient(red, green, blue);*/ /* Firefox 3.6 - 15 */
+    background: radial-gradient( #E50E0C,#E50E0C, transparent, #E50E0C,#E50E0C); /* 标准的语法（必须放在最后） */
+}
+
+.yellow {
+    /*background: -webkit-radial-gradient(red, green, blue);*/ /* Safari 5.1 - 6.0 */
+    /*background: -o-radial-gradient(red, green, blue);*/ /* Opera 11.6 - 12.0 */
+    /*background: -moz-radial-gradient(red, green, blue);*/ /* Firefox 3.6 - 15 */
+    background: radial-gradient( #F7EF10,#F7EF10, transparent, #F7EF10,#F7EF10); /* 标准的语法（必须放在最后） */
+}
+
+@keyframes myfirst {
+    0% {
+        transform: scale(1.0);
+    }
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}

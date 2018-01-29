@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>信息安全</title>
+<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css" />
+<link href="css/site.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="./css/t8.css" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+    <div id="starsBox"></div>
+
+	<div class="container-fluid">
+		<div class="clearfix title-name"><img src="images/title.png" /> 信息安全</div>
+		<div class="row">
+            <!--<div class="clearfix small-title-name">
+                <div class="col-xs-6">
+                    24小时各应用系统受攻击情况
+                </div>
+                <div class="col-xs-6">
+                    各种攻击类型Top5
+                </div>
+            </div>-->
+            <div class="clearfix">
+                <div class="col-xs-6">
+                    <div id="chart1"></div>
+                </div>
+                <div class="col-xs-6">
+                    <div id="chart2"></div>
+                </div>
+            </div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="js/echarts.min.js"></script>
+<script src="js/china.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // loadStars();
+    });
+    var myChart1 = echarts.init(document.getElementById('chart1'));
+    
+
+    var colors = ['#808A58', '#30558C','#A2D7FF'];
+
+    option1 = {
+        color: colors,
+        title: {
+            text: '24小时各应用系统受攻击情况',
+            x: "0%",
+            textStyle: {
+                color: '#e7e7e7',
+                fontSize: '22',
+                fontWeight: 'normal'
+            }
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        grid: {
+            right: '20%',
+            top:'23%'
+        },
+               
+        xAxis: [
+            {
+                type: 'category',
+                splitLine: { show: false },
+                axisLine: {
+                    show:false,
+                    lineStyle: {
+                        color: '#e7e7e7'
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                offset: 40,
+                data: ['OMS', 'TMS', 'CDK', 'APP', 'WMS']
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '频率',
+                min: 0,
+                splitLine: { show: false },
+                position: 'right',
+                axisLine: {
+                    show:false,
+                    lineStyle: {
+                        color: '#e7e7e7'
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    formatter: '{value}'
+                }
+            },
+            {
+                type: 'value',
+                name: '次数',
+                min: 0,
+                splitLine: { show: false },
+                position: 'left',
+                offset: 5,
+                axisLine: {
+                    show:false,
+                    lineStyle: {
+                        color: '#e7e7e7'
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    formatter: '{value}'
+                }
+            }
+        ],
+        series: [
+            {
+                name: '频率',
+                type: 'bar',
+                barWidth: 20,
+
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: 'top',
+                            formatter: function (p) {
+                                return p.value > 0 ? (p.value) : '';
+                            }
+                        }
+                    }                    
+                },
+                data: [10000, 5559, 7000, 2002, 2096]
+            },
+            {
+                name: '次数',
+                type: 'line',                
+                yAxisIndex: 1,
+                symbolSize: 15,
+                symbol: 'circle',
+                itemStyle: {
+                    normal: {
+                        color: "#A1D3F4",
+                        lineStyle: {
+                            color: "#A1D3F4"
+                        }
+                    }
+                },
+                data: [2006, 509, 9000, 2604, 2807]
+            }
+        ]
+    };
+    myChart1.setOption(option1);
+
+    ///--------
+    var myChart2 = echarts.init(document.getElementById('chart2'));
+
+    option2 = {
+        backgroundColor: 'transparent',
+        title: {
+            text: '各种攻击类型Top5',
+            y: "0%",
+            textStyle: {
+                color: '#e7e7e7',
+                fontSize: '22',
+                fontWeight: 'normal'
+            }
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        series: [
+            {
+                name: '来源',
+                type: 'pie',
+                radius: '80%',
+                center: ['50%', '60%'],
+               
+                data: [
+                    { value: 350, name: '35%注入' },
+                    { value: 300, name: '30%弱口令' },
+                    { value: 200, name: '20%越权' },
+                    { value: 150, name: '15%其它' }
+                ].sort(function (a, b) { return a.value - b.value }),
+                roseType: 'angle',
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: '#e7e7e7'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        lineStyle: {
+                            color: 'rgba(255, 255, 255, 0.3)'
+                        },
+                        smooth: 0.2,
+                        length: 20
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#68C4E6',
+                        shadowBlur: 200,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart2.setOption(option2);
+</script>

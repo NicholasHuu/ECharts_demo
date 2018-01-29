@@ -1,0 +1,98 @@
+@CHARSET "UTF-8";
+
+html, body {
+    background-image: url(../images/bg_07.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+#chart {
+    width:100%;
+    height:500px;
+}
+
+.div-rightinfo{
+    box-shadow: inset 0px 0px 20px #1D859E;
+    border: 3px solid #1D859E;
+    width:300px;
+    position:absolute;
+    right:10%;
+    bottom:3px;
+    padding:20px 40px;
+}
+.table1 {
+    margin-bottom: 0;
+    width:100%;
+}
+
+.table1 tbody tr td {
+    border: 0;
+    color: #fff;
+    width: 50%;
+    line-height: 30px;
+    white-space: nowrap;
+    padding-left:10px;
+}
+span.yuan {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    /*animation: myfirst 1.5s infinite ease-in-out;*/
+}
+span.fang {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    /*animation: myfirst 1.5s infinite ease-in-out;*/
+}
+
+.green {
+    /*background: -webkit-radial-gradient(red, green, blue);*/ /* Safari 5.1 - 6.0 */
+    /*background: -o-radial-gradient(red, green, blue);*/ /* Opera 11.6 - 12.0 */
+    /*background: -moz-radial-gradient(red, green, blue);*/ /* Firefox 3.6 - 15 */
+    background: radial-gradient( #A4C64A,#A4C64A, transparent, #A4C64A,#A4C64A); /* 标准的语法（必须放在最后） */
+}
+
+.prink {
+    /*background: -webkit-radial-gradient(red, green, blue);*/ /* Safari 5.1 - 6.0 */
+    /*background: -o-radial-gradient(red, green, blue);*/ /* Opera 11.6 - 12.0 */
+    /*background: -moz-radial-gradient(red, green, blue);*/ /* Firefox 3.6 - 15 */
+    background: radial-gradient( #E27985,#E27985, transparent, #E27985,#E27985); /* 标准的语法（必须放在最后） */
+}
+
+.yellow {
+    /*background: -webkit-radial-gradient(red, green, blue);*/ /* Safari 5.1 - 6.0 */
+    /*background: -o-radial-gradient(red, green, blue);*/ /* Opera 11.6 - 12.0 */
+    /*background: -moz-radial-gradient(red, green, blue);*/ /* Firefox 3.6 - 15 */
+    background: radial-gradient( #F6991E,#F6991E, transparent, #F6991E,#F6991E); /* 标准的语法（必须放在最后） */
+}
+
+@keyframes myfirst {
+    0% {
+        transform: scale(1.0);
+    }
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}

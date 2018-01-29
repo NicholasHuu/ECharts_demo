@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>可用性告警</title>
+<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css" />
+<link href="css/site.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="./css/t5.css" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+    <div id="starsBox"></div>
+
+	<div class="container-fluid">
+
+		<div class="clearfix title-name"><img src="images/title.png" /> 可用性告警</div>
+		<div class="row">
+			<div class="col-xs-3 div-list">
+                <div class="div-x"></div>
+                <div class="clearfix">
+                    <div class="col-xs-3"><img src="images/icon_1.png" /></div>
+                    <div class="col-xs-9">LTS</div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Critical</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-1">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">10%</span>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Warning</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-2">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">100%</span>
+                    </div>
+                </div>
+			</div>	
+            <div class="col-xs-3 div-list">
+                <div class="div-x"></div>
+                <div class="clearfix">
+                    <div class="col-xs-3"><img src="images/icon_2.png" /></div>
+                    <div class="col-xs-9">NGINX</div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Critical</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-1">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">10%</span>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Warning</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-2">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">100%</span>
+                    </div>
+                </div>
+            </div>	
+            <div class="col-xs-3 div-list">
+                <div class="div-x"></div>
+                <div class="clearfix">
+                    <div class="col-xs-3"><img src="images/icon_3.png" /></div>
+                    <div class="col-xs-9">zookeeper</div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Critical</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-1">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">10%</span>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Warning</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-2">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">100%</span>
+                    </div>
+                </div>
+            </div>	
+            <div class="col-xs-3 div-list">
+                <div class="div-x"></div>
+                <div class="clearfix">
+                    <div class="col-xs-3"><img src="images/icon_4.png" /></div>
+                    <div class="col-xs-9">zookeeper</div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Critical</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-1">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">10%</span>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Warning</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-2">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">100%</span>
+                    </div>
+                </div>
+            </div>	
+            
+            <!---->
+            <div class="col-xs-3 div-list">
+                <div class="div-x"></div>
+                <div class="clearfix">
+                    <div class="col-xs-3"><img src="images/icon_5.png" /></div>
+                    <div class="col-xs-9">weblogic</div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Critical</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-1">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">10%</span>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Warning</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-2">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">100%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3 div-list">
+                <div class="div-x"></div>
+                <div class="clearfix">
+                    <div class="col-xs-3"><img src="images/icon_6.png" /></div>
+                    <div class="col-xs-9">redis</div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Critical</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-1">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">10%</span>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Warning</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-2">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">100%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3 div-list">
+                <div class="div-x"></div>
+                <div class="clearfix">
+                    <div class="col-xs-3"><img src="images/icon_7.png" /></div>
+                    <div class="col-xs-9">Dubbo</div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Critical</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-1">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">10%</span>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Warning</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-2">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">100%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3 div-list">
+                <div class="div-x"></div>
+                <div class="clearfix">
+                    <div class="col-xs-3"><img src="images/icon_8.png" /></div>
+                    <div class="col-xs-9">Dubbo</div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Critical</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-1">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">10%</span>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="col-xs-3">Warning</div>
+                    <div class="col-xs-9">
+                        <div class="div-progress" id="t1-2">
+                            <div class="div-progress-bar" style=""></div>
+                        </div>
+                        <span class="pull-right text-right">100%</span>
+                    </div>
+                </div>
+            </div>		
+		</div>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(function () {
+        loadStars();
+
+        $('#t1-1 .div-progress-bar').animate({ 'width': '20%' },1000);
+        $('#t1-2 .div-progress-bar').animate({ 'width': '100%' }, 1000);
+    });    
+</script>

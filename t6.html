@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数据库存储</title>
+<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css" />
+<link href="css/site.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="./css/t6.css" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+    <div id="starsBox"></div>
+    
+	<div class="container-fluid">
+		<div class="clearfix title-name"><img src="images/title.png" /> 数据库存储</div>
+		<div class="row">
+			<div class="clearfix text-center div-asm"><img src="images/asm.png" /></div>
+            <div class="clearfix div-yuan-list">
+                <div class="col-xs-3">
+                    <div class="chart" id="c1"></div>
+                    <span class="span-x"></span>
+                    <div class="clearfix text-center chart-name">ASM</div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="chart" id="c2"></div>
+                    <span class="span-x"></span>
+                    <div class="clearfix text-center chart-name">ASM</div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="chart" id="c3"></div>
+                    <span class="span-x"></span>
+                    <div class="clearfix text-center chart-name">ASM</div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="chart" id="c4"></div>
+                    <span class="span-x"></span>
+                    <div class="clearfix text-center chart-name">ASM</div>
+                </div>
+            </div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="js/echarts.min.js"></script>
+<script src="js/echarts-liquidfill.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        loadStars();
+
+        var bgColor = 'rgba(35,91,131,.3)';
+        var containers = document.getElementsByClassName('chart');
+        var options = [
+            {
+            series: [{
+                type: 'liquidFill',
+                data: [0.5],
+                radius: '60%',
+                amplitude: '4%',
+                backgroundStyle: {
+                    color: bgColor
+                },
+                outline: {
+                    show: true,
+                    borderDistance: 5,
+                    itemStyle: {
+                        color: 'none',
+                        borderColor: 'rgba(1,190,204,.8)',
+                        borderWidth: 5,
+                        shadowBlur: 20,
+                        shadowColor: 'rgba(0, 0, 0, 0.25)'
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: 'rgba(1,190,204,.8)'
+                    }
+                },
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: '#01BECC',
+                            fontSize: 35,
+                            fontWeight: 'normal',
+                        }
+                    }
+                }
+            }]
+            },
+            {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.5],
+                    radius: '60%',
+                    amplitude: '4%',
+                    backgroundStyle: {
+                        color: bgColor
+                    },
+                    outline: {
+                        show: true,
+                        borderDistance: 5,
+                        itemStyle: {
+                            color: 'none',
+                            borderColor: 'rgba(1,190,204,.8)',
+                            borderWidth: 5,
+                            shadowBlur: 20,
+                            shadowColor: 'rgba(0, 0, 0, 0.25)'
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: 'rgba(1,190,204,.8)'
+                        }
+                    },
+                    label: {
+                        normal: {
+                            textStyle: {
+                                color: '#01BECC',
+                                fontSize: 35,
+                                fontWeight: 'normal',
+                            }
+                        }
+                    }
+                }]},{
+                    series: [{
+                        type: 'liquidFill',
+                        data: [0.7],
+                        radius: '60%',
+                        amplitude: '4%',
+                        backgroundStyle: {
+                            color: bgColor
+                        },
+                        outline: {
+                            show: true,
+                            borderDistance: 5,
+                            itemStyle: {
+                                color: 'none',
+                                borderColor: 'rgba(1,190,204,.8)',
+                                borderWidth: 5,
+                                shadowBlur: 20,
+                                shadowColor: 'rgba(0, 0, 0, 0.25)'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: 'rgba(1,190,204,.8)'
+                            }
+                        },
+                        label: {
+                            normal: {
+                                textStyle: {
+                                    color: '#01BECC',
+                                    fontSize: 35,
+                                    fontWeight: 'normal',
+                                }
+                            }
+                        }
+                    }]},{
+            series: [{
+                type: 'liquidFill',
+                data: [1],
+                radius: '60%',
+                amplitude: '4%',
+                backgroundStyle: {
+                    color: bgColor
+                },
+                outline: {
+                    show: true,
+                    borderDistance: 5,
+                    itemStyle: {
+                        color: 'none',
+                        borderColor: 'rgba(1,190,204,.8)',
+                        borderWidth: 5,
+                        shadowBlur: 20,
+                        shadowColor: 'rgba(0, 0, 0, 0.25)'
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: 'rgba(1,190,204,.8)'
+                    }
+                },
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: '#01BECC',
+                            fontSize: 35,
+                            fontWeight: 'normal',
+                        }
+                    }
+                }
+            }]
+        }];
+
+
+        var charts = [];
+        for (var i = 0; i < options.length; ++i) {
+            var chart = echarts.init(containers[i]);
+            chart.setOption(options[i]);
+            charts.push(chart);
+        }
+
+
+    });
+
+</script>

@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+
+html, body {
+    background-image: url(../images/bg_05.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+.title-name {
+    color: #27DFF9;
+    font-size: 20pt;
+    margin-bottom: 20px;
+}
+
+.div-list{
+    color:#e7e7e7;
+    font-size:16px;
+    /*border-top:1px solid rgba(250,250,250,.5);*/
+    margin-bottom:20px;
+}
+.div-x{
+    background: linear-gradient(to right, transparent, white, transparent);
+    height:1px;
+    margin-bottom:20px;    
+    margin-top:20px;
+}
+.div-list .clearfix{
+    margin-bottom:25px;
+}
+
+.div-list img{
+    width:60px;
+    height:60px;
+}
+.div-progress{
+    height:20px;
+    background:#4E5F6B;
+    border-radius:2px;
+    width:75%;
+    display:inline-block;
+}
+.div-progress-bar{
+    height:20px;
+    background:#CDD86F;
+    border-radius:1px;
+    width:0;
+}

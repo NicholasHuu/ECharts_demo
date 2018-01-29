@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+
+html, body {
+    background-image: url(../images/bg_06.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.div-asm img{
+    width:400px;
+}
+.chart {
+    width: 100%;
+    height: 300px;
+}
+.div-yuan-list{
+    margin-top:30px;
+}
+.div-yuan-list .clearfix{
+    position:relative;
+}
+.span-x{
+    position:absolute;
+    width:4px;
+    background: linear-gradient(to top, transparent, rgba(250,250,250,.6), transparent);
+    height:300px;
+    top:0;
+    right:0;
+    margin-right:-2px;
+}
+
+.chart-name{
+    color:#e7e7e7;
+    font-size:18px;
+}
